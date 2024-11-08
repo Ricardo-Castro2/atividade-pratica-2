@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios CSS Grid e Flexbox</title>
+  <!-- Link para o Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Estilos CSS adicionais para cada questão */
+    body{
+      background-color: #9ddff7;
+    }
+    /* Questão 4: Estilo para o layout "Sobre Nós" */
+    .sobre-nos {
+      background-color: #f0f8ff; /* Cor de fundo personalizada */
+      color: #333; /* Cor do texto */
+      padding: 20px;
+      border-radius: 8px; /* Bordas arredondadas para estilo */
+    }
+    
+      /* Questão 5: Estilo para o grid com espaçamento e alinhamento de itens */
+    .spacing-grid-container {
+      background-color: #e6f7ff; /* Cor de fundo personalizada */
+      padding: 20px;
+      border-radius: 8px;
+    }
+    
+      /* Estilo das caixas individuais na Questão 5 */
+    .spacing-grid-container .box {
+      background-color: #4ec8f4; /* Cor de fundo das caixas */
+      color: #fff; /* Cor do texto */
+      padding: 10px;
+      border-radius: 4px;
+    }
+    
+
+    /* Questão 1: Layout de Cabeçalho com CSS Grid */
+    .header {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      padding: 10px;
+      background-color: rgb(215, 250, 250);
+    }
+    .title {
+      text-align: center;
+    }
+
+    /* Questão 3: Alinhar Divs com CSS Grid */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      background-color: #d6e9fe;
+      border: 1px solid #dee2e6;
+    }
+
+    /* Questão 5: Grid com Espaçamento e Alinhamento de Itens */
+    .spacing-grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .box h5{
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Questão 1: Layout de Cabeçalho com CSS Grid -->
+  <header class="header">
+    <div class="logo"><img src="logo.webp" height="80" width="80" ></div>
+    <h1 class="title">Inove Estilo</h1>
+    <nav class="nav d-flex gap-3">
+      <a href="#">Início</a>
+      <a href="#">Serviços</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Questão 2: Organizar Cartões de Produtos com Flexbox do Bootstrap -->
+  <div class="container d-flex justify-content-around flex-wrap mt-4">
+    <div class="card text-center" style="width: 18rem;">
+      <img src="vestido_crochet_jeri_dourado.jpg" class="card-img-top" alt="Imagem Produto 1">
+      <div class="card-body">
+        <h5 class="card-title">Vestido de Crochê Dourado - Estilo Halter</h5>
+        <p class="card-text">Com um toque sofisticado e sensual, este vestido de crochê dourado é perfeito para ocasiões especiais. O decote halter valoriza os ombros, enquanto a trama com desenhos geométricos e recortes traz um charme único à peça. Ideal para festas e eventos ao ar livre.</p>
+          <a href="#" class="btn btn-primary">Ver mais</a>
+      </div>
+    </div>
+    <div class="card text-center" style="width: 18rem;">
+      <img src="conjunto_praia_masculino.webp" class="card-img-top" alt="Imagem Produto 2">
+      <div class="card-body">
+        <h5 class="card-title">Conjunto Masculino de Crochê - Estilo Praia</h5>
+        <p class="card-text">Apresentamos o Conjunto Masculino de Crochê - um visual descolado e moderno, perfeito para dias ensolarados e ambientes de praia. Este conjunto exclusivo combina estilo e conforto, sendo ideal para quem busca uma peça diferenciada e sofisticada em crochê.</p>
+          <a href="#" class="btn btn-primary">Ver mais</a>
+      </div>
+    </div>
+    <div class="card text-center" style="width: 18rem;">
+      <img src="conjunto_saida_de_praia_de_crochet.jpg" class="card-img-top" alt="Imagem Produto 3">
+      <div class="card-body">
+        <h5 class="card-title">Conjunto Feminino de Crochê Saída de Praia</h5>
+        <p class="card-text">Esse conjunto de crochê é o parceiro perfeito para os dias de praia! Composto por um top ciganinha com franjas e uma saia longa com abertura lateral, ele oferece um visual leve e atraente. A cor verde água e a trama espaçada do crochê trazem frescor e estilo para seu look de verão.</p>
+          <a href="#" class="btn btn-primary">Ver mais</a>
+      </div>
+    </div>
+  </div>
+  <!---->
+   <div class="container d-flex justify-content-around flex-wrap mt-4">
+    <div class="card text-center" style="width: 18rem;">
+      <img src="blusa.jpg" class="card-img-top" alt="Blusa de Crochê Feminina">
+      <div class="card-body">
+        <h5 class="card-title">Blusa Feminina</h5>
+        <p class="card-text">Blusa de crochê feita à mão, disponível em várias cores e tamanhos.</p>
+        <a href="#" class="btn btn-primary">Ver mais</a>
+      </div>
+    </div>
+    <div class="card text-center" style="width: 18rem;">
+      <img src="Croche_scaled.jpg" class="card-img-top" alt="Camiseta de Crochê Masculina">
+      <div class="card-body">
+        <h5 class="card-title">Camiseta Masculina</h5>
+        <p class="card-text">Camiseta de crochê feita sob medida, confortável e estilosa.</p>
+        <a href="#" class="btn btn-primary">Ver mais</a>
+      </div>
+    </div>
+    <div class="card text-center" style="width: 18rem;">
+      <img src="gorro.jpg" class="card-img-top" alt="Gorro de Crochê">
+      <div class="card-body">
+        <h5 class="card-title">Gorro</h5>
+        <p class="card-text">Gorro de crochê unissex, ideal para o inverno.</p>
+        <a href="#" class="btn btn-primary">Ver mais</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Questão 3: Alinhar Divs com CSS Grid -->
+  <div class="grid-container mt-4 container">
+    <div>
+      <h2>Categorias</h2>
+    </div><p></p>
+    <div class="box">
+      <h4>Feminino</h4>
+    </div>
+    <div class="box">
+      <h4>Masculino</h4>
+    </div>
+    <div class="box">
+      <h4>Acessórios</h4>
+    </div>
+    <div class="box">
+      <h4>Conjuntos</h4>
+    </div>
+  </div>
+
+  <!-- Questão 4: Layout Responsivo com Flexbox do Bootstrap -->
+  <div class="container d-flex flex-column flex-md-row align-items-center mt-4 gap-4">
+    <img src="logo.webp" alt="Imagem" class="img-fluid" style="max-width: 30%; height: 30%;">
+    <div class="texto">
+      <h2>Sobre Nós</h2>
+      <p>Somos uma loja especializada em roupas de crochê feitas à mão, com carinho e dedicação em cada peça. Nossas criações são pensadas para quem valoriza o trabalho artesanal e o estilo único que só o crochê pode oferecer. Da escolha dos fios ao acabamento, tudo é feito com o máximo cuidado para trazer conforto e beleza aos nossos clientes.</p>
+    </div>
+  </div>
+
+  <!-- Questão 5: Grid com Espaçamento e Alinhamento de Itens -->
+  <div class="spacing-grid-container mt-4 container">
+    <div class="box">
+      <h5>Produto Destaque 1</h5>
+    </div>
+    <div class="box">
+      <h5>Produto Destaque 2</h5>
+    </div>
+    <div class="box">
+      <h5>Produto Destaque 3</h5>
+    </div>
+    <div class="box">
+      <h5>Produto Destaque 4</h5>
+    </div>
+    <div class="box">
+      <h5>Produto Destaque 5</h5>
+    </div>
+    <div class="box">
+      <h5>Produto Destaque 6</h5>
+    </div>
+  </div>
+
+  <!-- Link para o Bootstrap JS (opcional, se necessário) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
